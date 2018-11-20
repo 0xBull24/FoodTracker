@@ -1,0 +1,25 @@
+{
+  "name": "foodtracker",
+  "version": "1.0.0",
+  "description": "Foodtracker allows users to simply add food to a list, log them in a data store, and 'eat' them if they choose to do so.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DBiles/FoodTracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DBiles/FoodTracker/issues"
+  },
+  "homepage": "https://github.com/DBiles/FoodTracker#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  }
+}
