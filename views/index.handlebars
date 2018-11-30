@@ -1,0 +1,37 @@
+<div class="uk-container-center uk-section uk-grid">
+    <div class="uk-width-1-2">
+        {{!-- Only show burgers that are that are false / 0 in the DB --}}
+        <h2>Burgers to EAT!</h2>
+        <ul>
+            {{#each burger}}
+            {{#unless devoured}}
+            {{> burgerlist devoured=1}}
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="uk-width-1-2">
+        {{!-- Only show burgers that are true / 1 in the DB --}}
+        <h2>Burgers People Ate</h2>
+        <ul>
+            {{#each burger}}
+            {{#if devoured}}
+            {{> burgerlist devoured=0}}
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+<div class="container uk-section">
+    <div class="row add-a-burger">
+        <form action="">
+            <legend class="uk-legend">Add a Burger</legend>
+            <div class="uk-margin">
+                <textarea class='uk-textarea' id="new-burger" rows="5" placeholder="Add a new burger..."></textarea>
+            </div>
+            <button class="uk-button uk-button-default uk-button-small" type="submit" id="new-burger-button">Add it!</button>
+        </form>
+    </div>
+</div>

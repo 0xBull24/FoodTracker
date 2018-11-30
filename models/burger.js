@@ -14,8 +14,8 @@ var burger = {
         });
     },
 
-    update: function(cols, vals, condition, cb) {
-        orm.update('burgers', cols, vals, condition, (res) => {
+    update: function(vals, condition, cb) {
+        orm.update('burgers', 'devoured', vals, condition, (res) => {
             cb(res);
         });
     }

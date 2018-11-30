@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
 router.post('/api/burgers', (req, res) => {
   burger.create(
     ["burger_name", "devoured"],
-    [req.body.burger_name, req.body.devoured],
+    [`'${req.body.burger_name}'`, `${req.body.devoured}`],
     data => {
       if (data.affectedRows == 0) {
         return res.status(404).end();
@@ -34,7 +34,7 @@ router.post('/api/burgers', (req, res) => {
 // Update if a burger is devoured or not
 router.put('/api/burgers/:id', (req, res) => {
     const condition = `id = ${req.params.id}`
-    burger.update(req.body, condition, data => {
+    burger.update(req.body.devoured, condition, data => {
         if (data.affectedRows == 0){
         return res.status(404).end();
         } else {

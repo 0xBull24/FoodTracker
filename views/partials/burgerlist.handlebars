@@ -1,0 +1,12 @@
+<li class="burger-list uk-margin" style="list-style-type: none">
+    <span>
+        {{this.id}}. {{this.burger_name}}
+    </span>
+    <button class='burger-button' data-id='{{this.id}}' data-devoured={{devoured}}>
+        {{#if devoured}}
+        <span uk-icon='close'></span>
+        {{else}}
+        <span uk-icon='check'></span>
+        {{/if}}
+    </button>
+</li>
