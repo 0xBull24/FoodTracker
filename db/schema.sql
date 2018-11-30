@@ -7,5 +7,5 @@ use burger_db;
 create table burgers (
     id int auto_increment primary key,
     burger_name varchar(100) not null,
-    devoured boolean default 0
+    devoured boolean default 0 not null
 );
